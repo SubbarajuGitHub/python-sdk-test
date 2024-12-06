@@ -7,7 +7,6 @@ long_description = Path('README.md').read_text() if Path('README.md').exists() e
  
 setup(
     name='python_test_video_fp',
-=======
     version='0.2.0',
 
     packages=find_packages(),
