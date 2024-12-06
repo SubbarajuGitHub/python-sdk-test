@@ -31,8 +31,8 @@ jobs:
       - name: Remove .egg files
         run: rm dist/*.egg
         
-      - name: Publish package to TestPyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          password: ${{ secrets.TOKEN }}
-          repository-url: https://test.pypi.org/legacy/
+      - name: Publish package
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.TOKEN }}
+        run: twine upload dist/*
