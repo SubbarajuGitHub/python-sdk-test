@@ -3,7 +3,7 @@ from pathlib import Path
 long_description = Path('README.md').read_text() if Path('README.md').exists() else ''
 
 setup(
-    name='fp-video-sdk-subbaraju-chekuri',
+    name='python_test_video_fp',
     version='0.1.0',
     packages=find_packages(),
     install_requires=[
